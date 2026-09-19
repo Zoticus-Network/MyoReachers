@@ -4,6 +4,7 @@ Authors  :: Vikash Kumar (vikashplus@gmail.com), Vittorio Caggiano (caggiano@gma
 ================================================= """
 
 import collections
+
 import numpy as np
 from myosuite.utils import gym
 

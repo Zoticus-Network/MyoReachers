@@ -18,7 +18,7 @@
   </visual>
 
   <default>
-    <default class="myohand">
+    <default class="myowrist">
       <joint limited="true" damping="0.05" armature="1e-4" stiffness="0"/>
       <geom contype="0" conaffinity="0" condim="3" rgba="0.8 0.8 .8 1" margin="0.001" solref=".02 1" solimp=".8 .8 .01" material="geom"/>
       <site size="0.0012" rgba=".2 .6 .2 1" group="3"/>
@@ -90,7 +90,7 @@
 
 
   <tendon>
-    <spatial class="myohand" name="ECRL_tendon" >
+    <spatial class="myowrist" name="ECRL_tendon" >
       <site site="ECRL-P1"/>
       <geom geom="Elbow_PT_ECRL_wrap" sidesite="Elbow_PT_ECRL_site_ECRL_side"></geom>
       <site site="ECRL-P2"/>
@@ -98,14 +98,14 @@
       <geom geom="ECRL_torus_wrap" sidesite="ECRL_torus_site_ECRL_side"/>
       <site site="ECRL-P4"/>
     </spatial>
-    <spatial class="myohand" name="ECRB_tendon" >
+    <spatial class="myowrist" name="ECRB_tendon" >
       <site site="ECRB-P1"/>
       <site site="ECRB-P2"/>
       <site site="ECRB-P3"/>
       <geom geom="ECRB_torus_wrap" sidesite="ECRB_torus_site_ECRB_side"/>
       <site site="ECRB-P4"/>
     </spatial>
-    <spatial class="myohand" name="ECU_tendon" >
+    <spatial class="myowrist" name="ECU_tendon" >
       <site site="ECU-P1"/>
       <site site="ECU-P2"/>
       <site site="ECU-P3"/>
@@ -114,14 +114,14 @@
       <geom geom="ECU_torus_wrap" sidesite="ECU_torus_site_ECU_side"/>
       <site site="ECU-P6"/>
     </spatial>
-    <spatial class="myohand" name="FCR_tendon" >
+    <spatial class="myowrist" name="FCR_tendon" >
       <site site="FCR-P1"/>
       <geom geom="Elbow_PT_FCU_wrap" sidesite="Elbow_PT_FCU_site_FCU_side"></geom>
       <site site="FCR-P2"/>
       <geom geom="FCR_torus_wrap" sidesite="FCR_torus_site_FCR_side"/>
       <site site="FCR-P3"/>
     </spatial>
-    <spatial class="myohand" name="FCU_tendon" >
+    <spatial class="myowrist" name="FCU_tendon" >
       <site site="FCU-P1"/>
       <geom geom="Elbow_PT_FCU_wrap" sidesite="Elbow_PT_FCU_site_FCU_side"></geom>
       <site site="FCU-P2"/>
@@ -130,7 +130,7 @@
       <site site="FCU-P4"/>
       <site site="FCU-P5"/>
     </spatial>
-    <spatial class="myohand" name="PL_tendon" >
+    <spatial class="myowrist" name="PL_tendon" >
       <site site="PL-P1"/>
       <geom geom="Elbow_PT_FCU_wrap" sidesite="Elbow_PT_FCU_site_FCU_side"></geom>
       <site site="PL-P2"/>
@@ -138,7 +138,7 @@
       <site site="PL-P3"/>
       <site site="PL-P4"/>
     </spatial>
-    <spatial class="myohand" name="PT_tendon">
+    <spatial class="myowrist" name="PT_tendon">
       <site site="PT-P1"/>
       <geom geom="Elbow_PT_FCU_wrap" sidesite="Elbow_PT_FCU_site_FCU_side"></geom>
       <site site="PT-P2"/>
@@ -146,12 +146,12 @@
       <site site="PT-P4"/>
       <site site="PT-P5"/>
     </spatial>
-    <spatial class="myohand" name="PQ_tendon" >
+    <spatial class="myowrist" name="PQ_tendon" >
       <site site="PQ-P1"/>
       <geom geom="PQ2_wrap" sidesite="PQ2_site_PQ_side"/>
       <site site="PQ-P2"/>
     </spatial>
-    <spatial class="myohand" name="FDS5_tendon" >
+    <spatial class="myowrist" name="FDS5_tendon" >
       <site site="FDS5-P1"/>
       <geom geom="Elbow_PT_FCU_wrap" sidesite="Elbow_PT_FCU_site_FCU_side"></geom>
       <site site="FDS5-P2"/>
@@ -160,11 +160,8 @@
       <site site="FDS5-P4"/>
       <site site="FDS5-P5"/>
       <!-- <geom geom="5thmcp_ellipsoid_wrap" sidesite="5thmcp_ellipsoid_site_FDS5_side"/> -->
-      <site site="FDS5-P6"/>
-      <site site="FDS5-P7"/>
-      <site site="FDS5-P8"/>
     </spatial>
-    <spatial class="myohand" name="FDS4_tendon" >
+    <spatial class="myowrist" name="FDS4_tendon" >
       <site site="FDS4-P1"/>
       <geom geom="Elbow_PT_FCU_wrap" sidesite="Elbow_PT_FCU_site_FCU_side"></geom>
       <site site="FDS4-P2"/>
@@ -174,33 +171,24 @@
       <site site="FDS4-P4"/>
       <site site="FDS4-P5"/>
       <!-- <geom geom="4thmcp_ellipsoid_wrap" sidesite="4thmcp_ellipsoid_site_FDS4_side"/> -->
-      <site site="FDS4-P6"/>
-      <site site="FDS4-P7"/>
-      <site site="FDS4-P8"/>
     </spatial>
-    <spatial class="myohand" name="FDS3_tendon" >
+    <spatial class="myowrist" name="FDS3_tendon" >
       <site site="FDS3-P1"/>
       <site site="FDS3-P2"/>
       <geom geom="FDS_ellipsoid_wrap" sidesite="FDS_ellipsoid_site_FDS3_side"/>
       <site site="FDS3-P3"/>
       <site site="FDS3-P4"/>
       <!-- <site site="FDS3-P5"/> -->
-      <site site="FDS3-P6"/>
-      <site site="FDS3-P7"/>
-      <site site="FDS3-P8"/>
     </spatial>
-    <spatial class="myohand" name="FDS2_tendon" >
+    <spatial class="myowrist" name="FDS2_tendon" >
       <site site="FDS2-P1"/>
       <site site="FDS2-P2"/>
       <geom geom="FDS_ellipsoid_wrap" sidesite="FDS_ellipsoid_site_FDS2_side"/>
       <site site="FDS2-P3"/>
       <site site="FDS2-P4"/>
       <site site="FDS2-P5"/>
-      <site site="FDS2-P6"/>
-      <site site="FDS2-P7"/>
-      <site site="FDS2-P8"/>
     </spatial>
-    <spatial class="myohand" name="FDP5_tendon" >
+    <spatial class="myowrist" name="FDP5_tendon" >
       <site site="FDP5-P1"/>
       <site site="FDP5-P2"/>
       <geom geom="FDP_ellipsoid_wrap" sidesite="FDP_ellipsoid_site_FDP5_side"/>
@@ -208,13 +196,8 @@
       <site site="FDP5-P4"/>
       <!-- <geom geom="5thmcp_ellipsoid_wrap" sidesite="5thmcp_ellipsoid_site_FDP5_side"/> -->
       <site site="FDP5-P5"/>
-      <site site="FDP5-P6"/>
-      <site site="FDP5-P7"/>
-      <site site="FDP5-P8"/>
-      <site site="FDP5-P9"/>
-      <site site="FDP5-P10"/>
     </spatial>
-    <spatial class="myohand" name="FDP4_tendon" >
+    <spatial class="myowrist" name="FDP4_tendon" >
       <site site="FDP4-P1"/>
       <site site="FDP4-P2"/>
       <geom geom="FDP_ellipsoid_wrap" sidesite="FDP_ellipsoid_site_FDP4_side"/>
@@ -222,13 +205,8 @@
       <site site="FDP4-P4"/>
       <geom geom="4thmcp_ellipsoid_wrap" sidesite="4thmcp_ellipsoid_site_FDP4_side"/>
       <site site="FDP4-P5"/>
-      <site site="FDP4-P6"/>
-      <!-- <site site="FDP4-P7"/> -->
-      <site site="FDP4-P8"/>
-      <site site="FDP4-P9"/>
-      <site site="FDP4-P10"/>
     </spatial>
-    <spatial class="myohand" name="FDP3_tendon" >
+    <spatial class="myowrist" name="FDP3_tendon" >
       <site site="FDP3-P1"/>
       <site site="FDP3-P2"/>
       <geom geom="FDP_ellipsoid_wrap" sidesite="FDP_ellipsoid_site_FDP3_side"/>
@@ -236,87 +214,44 @@
       <site site="FDP3-P4"/>
       <site site="FDP3-P5"/>
       <!-- <geom geom="3rdmcp_ellipsoid_wrap" sidesite="3rdmcp_ellipsoid_site_FDP3_side"/> -->
-      <site site="FDP3-P6"/>
-      <!-- <site site="FDP3-P7"/> -->
-      <site site="FDP3-P8"/>
-      <site site="FDP3-P9"/>
-      <site site="FDP3-P10"/>
     </spatial>
-    <spatial class="myohand" name="FDP2_tendon" >
+    <spatial class="myowrist" name="FDP2_tendon" >
       <site site="FDP2-P1"/>
       <site site="FDP2-P2"/>
       <geom geom="FDP_ellipsoid_wrap" sidesite="FDP_ellipsoid_site_FDP2_side"/>
       <site site="FDP2-P3"/>
       <site site="FDP2-P4"/>
       <site site="FDP2-P5"/>
-      <geom geom="2ndmcp_ellipsoid_wrap" sidesite="2ndmcp_ellipsoid_site_FDP2_side"/>
-      <site site="FDP2-P6"/>
-      <site site="FDP2-P7"/>
-      <site site="FDP2-P8"/>
-      <site site="FDP2-P9"/>
-      <site site="FDP2-P10"/>
     </spatial>
-    <spatial class="myohand" name="EDC5_tendon" >
+    <spatial class="myowrist" name="EDC5_tendon" >
       <site site="EDC5-P1"/>
       <site site="EDC5-P2"/>
       <site site="EDC5-P3"/>
       <geom geom="EDCL_torus_wrap" sidesite="EDCL_torus_site_EDC5_side"/>
       <site site="EDC5-P4"/>
-      <geom geom="5thmcp_ellipsoid_wrap" sidesite="5thmcp_ellipsoid_site_EDC5_side"/>
-      <site site="EDC5-P5"/>
-      <site site="EDC5-P6"/>
-      <geom geom="Fifthpm_wrap" sidesite="Fifthpm_site_EDC5_side"/>
-      <site site="EDC5-P7"/>
-      <site site="EDC5-P8"/>
-      <geom geom="Fifthmd_wrap" sidesite="Fifthmd_site_EDC5_side"/>
-      <site site="EDC5-P9"/>
     </spatial>
-    <spatial class="myohand" name="EDC4_tendon" >
+    <spatial class="myowrist" name="EDC4_tendon" >
       <site site="EDC4-P1"/>
       <site site="EDC4-P2"/>
       <site site="EDC4-P3"/>
       <geom geom="EDCR_torus_wrap" sidesite="EDCR_torus_site_EDC4_side"/>
       <site site="EDC4-P4"/>
-      <geom geom="4thmcp_ellipsoid_wrap" sidesite="4thmcp_ellipsoid_site_EDC4_side"/>
-      <site site="EDC4-P5"/>
-      <site site="EDC4-P6"/>
-      <geom geom="Fourthpm_wrap" sidesite="Fourthpm_site_EDC4_side"/>
-      <site site="EDC4-P7"/>
-      <site site="EDC4-P8"/>
-      <geom geom="Fourthmd_wrap" sidesite="Fourthmd_site_EDC4_side"/>
-      <site site="EDC4-P9"/>
     </spatial>
-    <spatial class="myohand" name="EDC3_tendon" >
+    <spatial class="myowrist" name="EDC3_tendon" >
       <site site="EDC3-P1"/>
       <site site="EDC3-P2"/>
       <site site="EDC3-P3"/>
       <geom geom="EDCM_torus_wrap" sidesite="EDCM_torus_site_EDC3_side"/>
       <site site="EDC3-P4"/>
-      <geom geom="3rdmcp_ellipsoid_wrap" sidesite="3rdmcp_ellipsoid_site_EDC3_side"/>
-      <site site="EDC3-P5"/>
-      <site site="EDC3-P6"/>
-      <geom geom="Thirdpm_wrap" sidesite="Thirdpm_site_EDC3_side"/>
-      <site site="EDC3-P7"/>
-      <site site="EDC3-P8"/>
-      <geom geom="Thirdmd_wrap" sidesite="Thirdmd_site_EDC3_side"/>
-      <site site="EDC3-P9"/>
     </spatial>
-    <spatial class="myohand" name="EDC2_tendon" >
+    <spatial class="myowrist" name="EDC2_tendon" >
       <site site="EDC2-P1"/>
       <site site="EDC2-P2"/>
       <site site="EDC2-P3"/>
       <geom geom="EDCI_torus_wrap" sidesite="EDCI_torus_site_EDC2_side"/>
       <site site="EDC2-P4"/>
-      <geom geom="2ndmcp_ellipsoid_wrap" sidesite="2ndmcp_ellipsoid_site_EDC2_side"/>
-      <site site="EDC2-P5"/>
-      <site site="EDC2-P6"/>
-      <geom geom="Secondpm_wrap" sidesite="Secondpm_site_EDC2_side"/>
-      <site site="EDC2-P7"/>
-      <site site="EDC2-P8"/>
-      <geom geom="Secondmd_wrap" sidesite="Secondmd_site_EDC2_side"/>
-      <site site="EDC2-P9"/>
     </spatial>
-    <spatial class="myohand" name="EDM_tendon" >
+    <spatial class="myowrist" name="EDM_tendon" >
       <site site="EDM-P1"/>
       <site site="EDM-P2"/>
       <site site="EDM-P3"/>
@@ -324,31 +259,16 @@
       <geom geom="EDM_ellipsoid_wrap" sidesite="EDM_ellipsoid_site_EDM_side"/>
       <site site="EDM-P5"/>
       <site site="EDM-P6"/>
-      <geom geom="5thmcp_ellipsoid_wrap" sidesite="5thmcp_ellipsoid_site_EDC5_side"/>
-      <site site="EDM-P7"/>
-      <geom geom="Fifthpm_wrap"/>
-      <site site="EDM-P8"/>
-      <geom geom="Fifthmd_wrap" sidesite="Fifthmd_site_EDC5_side"/>
-      <site site="EDM-P9"/>
     </spatial>
-    <spatial class="myohand" name="EIP_tendon" >
+    <spatial class="myowrist" name="EIP_tendon" >
       <site site="EIP-P1"/>
       <site site="EIP-P2"/>
       <site site="EIP-P3"/>
       <geom geom="ExtensorEllipse_ellipsoid_wrap" sidesite="ExtensorEllipse_ellipsoid_site_EIP_side"/>
       <site site="EIP-P4"/>
       <site site="EIP-P5"/>
-      <geom geom="2ndmcp_ellipsoid_wrap" sidesite="2ndmcp_ellipsoid_site_EIP_side"/>
-      <site site="EIP-P6"/>
-      <site site="EIP-P7"/>
-      <geom geom="Secondpm_wrap" sidesite="Secondpm_site_EIP_side"/>
-      <site site="EIP-P8"/>
-      <site site="EIP-P9"/>
-      <geom geom="Secondmd_wrap" sidesite="Secondmd_site_EIP_side"/>
-      <site site="EIP-P10"/>
-      <site site="EIP-P11"/>
     </spatial>
-    <spatial class="myohand" name="EPL_tendon" springlength="0.2305">
+    <spatial class="myowrist" name="EPL_tendon" springlength="0.2305">
       <site site="EPL-P1"/>
       <site site="EPL-P2"/>
       <site site="EPL-P3"/>
@@ -358,13 +278,8 @@
       <site site="EPL-P7"/>
       <site site="EPL-P8"/>
       <site site="EPL-P9"/>
-      <geom geom="MPthumb_wrap"/>
-      <site site="EPL-P10"/>
-      <site site="EPL-P11"/>
-      <geom geom="IPthumb_wrap" sidesite="IPthumb_site_EPL_side"/>
-      <site site="EPL-P12"/>
     </spatial>
-    <spatial class="myohand" name="EPB_tendon" >
+    <spatial class="myowrist" name="EPB_tendon" >
       <site site="EPB-P1"/>
       <site site="EPB-P2"/>
       <site site="EPB-P3"/>
@@ -372,10 +287,8 @@
       <site site="EPB-P5"/>
       <site site="EPB-P6"/>
       <site site="EPB-P7"/>
-      <geom geom="MPthumb_wrap" sidesite="MPthumb_site_EPB_side"/>
-      <site site="EPB-P8"/>
     </spatial>
-    <spatial class="myohand" name="FPL_tendon" >
+    <spatial class="myowrist" name="FPL_tendon" >
       <site site="FPL-P1"/>
       <site site="FPL-P2"/>
       <site site="FPL-P3"/>
@@ -384,13 +297,8 @@
       <geom geom="FPL_ellipsoid_wrap"/>
       <site site="FPL-P7"/>
       <site site="FPL-P8"/>
-      <geom geom="MPthumb_wrap" sidesite="MPthumb_site_FPL_side"/>
-      <site site="FPL-P9"/>
-      <site site="FPL-P10"/>
-      <geom geom="IPthumb_wrap" sidesite="IPthumb_site_FPL_side"/>
-      <site site="FPL-P11"/>
     </spatial>
-    <spatial class="myohand" name="APL_tendon" >
+    <spatial class="myowrist" name="APL_tendon" >
       <site site="APL-P1"/>
       <site site="APL-P2"/>
       <site site="APL-P3"/>
@@ -401,99 +309,57 @@
       <site site="APL-P7"/>
       <site site="APL-P8"/>
     </spatial>
-    <spatial class="myohand" name="OP_tendon" >
+    <spatial class="myowrist" name="OP_tendon" >
       <site site="OP-P1"/>
       <site site="OP-P2"/>
     </spatial>
-    <spatial class="myohand" name="RI2_tendon" >
+    <spatial class="myowrist" name="RI2_tendon" >
       <site site="RI2-P1"/>
       <site site="RI2-P2"/>
-      <geom geom="2ndmcp_ellipsoid_wrap" sidesite="2ndmcp_ellipsoid_site_RI2_side"/>
-      <site site="RI2-P3"/>
     </spatial>
-    <spatial class="myohand" name="LU_RB2_tendon" >
+    <spatial class="myowrist" name="LU_RB2_tendon" >
       <site site="LU_RB2-P1"/>
       <site site="LU_RB2-P2"/>
-      <site site="LU_RB2-P3"/>
-      <site site="LU_RB2-P4"/>
-      <geom geom="Secondpm_wrap" sidesite="Secondpm_site_LU_RB2_side"/>
-      <site site="LU_RB2-P5"/>
-      <site site="LU_RB2-P6"/>
     </spatial>
-    <spatial class="myohand" name="UI_UB2_tendon" >
+    <spatial class="myowrist" name="UI_UB2_tendon" >
       <site site="UI_UB2-P1"/>
       <site site="UI_UB2-P2"/>
-      <site site="UI_UB2-P3"/>
-      <site site="UI_UB2-P4"/>
-      <geom geom="Secondpm_wrap" sidesite="Secondpm_site_UI_UB2_side"/>
-      <site site="UI_UB2-P5"/>
-      <site site="UI_UB2-P6"/>
     </spatial>
-    <spatial class="myohand" name="RI3_tendon" >
+    <spatial class="myowrist" name="RI3_tendon" >
       <site site="RI3-P1"/>
       <site site="RI3-P2"/>
-      <site site="RI3-P3"/>
     </spatial>
-    <spatial class="myohand" name="LU_RB3_tendon" >
+    <spatial class="myowrist" name="LU_RB3_tendon" >
       <site site="LU_RB3-P1"/>
       <site site="LU_RB3-P2"/>
-      <site site="LU_RB3-P3"/>
-      <!-- <geom geom="3rdmcp_ellipsoid_wrap" sidesite="3rdmcp_ellipsoid_site_LU_RB3_side"/> -->
-      <site site="LU_RB3-P4"/>
-      <geom geom="Thirdpm_wrap" sidesite="Thirdpm_site_LU_RB3_side"/>
-      <site site="LU_RB3-P5"/>
     </spatial>
-    <spatial class="myohand" name="UI_UB3_tendon" >
+    <spatial class="myowrist" name="UI_UB3_tendon" >
       <site site="UI_UB3-P1"/>
       <site site="UI_UB3-P2"/>
-      <site site="UI_UB3-P3"/>
-      <site site="UI_UB3-P4"/>
-      <geom geom="Thirdpm_wrap" sidesite="Thirdpm_site_UI_UB3_side"/>
-      <site site="UI_UB3-P5"/>
     </spatial>
-    <spatial class="myohand" name="RI4_tendon">
+    <spatial class="myowrist" name="RI4_tendon">
       <site site="RI4-P1"/>
       <site site="RI4-P2"/>
-      <site site="RI4-P3"/>
     </spatial>
-    <spatial class="myohand" name="LU_RB4_tendon" >
+    <spatial class="myowrist" name="LU_RB4_tendon" >
       <site site="LU_RB4-P1"/>
       <site site="LU_RB4-P2"/>
-      <site site="LU_RB4-P3"/>
-      <site site="LU_RB4-P4"/>
-      <site site="LU_RB4-P5"/>
     </spatial>
-    <spatial class="myohand" name="UI_UB4_tendon" >
+    <spatial class="myowrist" name="UI_UB4_tendon" >
       <site site="UI_UB4-P1"/>
       <site site="UI_UB4-P2"/>
-      <geom geom="4thmcp_ellipsoid_wrap" sidesite="4thmcp_ellipsoid_site_UI_UB4_side"/>
-      <site site="UI_UB4-P3"/>
-      <site site="UI_UB4-P4"/>
-      <geom geom="Fourthpm_wrap" sidesite="Fourthpm_site_UI_UB4_side"/>
-      <site site="UI_UB4-P5"/>
     </spatial>
-    <spatial class="myohand" name="RI5_tendon" >
+    <spatial class="myowrist" name="RI5_tendon" >
       <site site="RI5-P1"/>
       <site site="RI5-P2"/>
-      <site site="RI5-P3"/>
     </spatial>
-    <spatial class="myohand" name="LU_RB5_tendon" >
+    <spatial class="myowrist" name="LU_RB5_tendon" >
       <site site="LU_RB5-P1"/>
       <site site="LU_RB5-P2"/>
-      <geom geom="5thmcp_ellipsoid_wrap" sidesite="5thmcp_ellipsoid_site_LU_RB5_side"/>
-      <site site="LU_RB5-P3"/>
-      <site site="LU_RB5-P4"/>
-      <geom geom="Fifthpm_wrap" sidesite="Fifthpm_site_LU_RB5_side"/>
-      <site site="LU_RB5-P5"/>
     </spatial>
-    <spatial class="myohand" name="UI_UB5_tendon" >
+    <spatial class="myowrist" name="UI_UB5_tendon" >
       <site site="UI_UB5-P1"/>
       <site site="UI_UB5-P2"/>
-      <geom geom="5thmcp_ellipsoid_wrap" sidesite="5thmcp_ellipsoid_site_UI_UB5_side"/>
-      <site site="UI_UB5-P3"/>
-      <site site="UI_UB5-P4"/>
-      <geom geom="Fifthpm_wrap" sidesite="Fifthpm_site_UI_UB5_side"/>
-      <site site="UI_UB5-P5"/>
     </spatial>
   </tendon>
 

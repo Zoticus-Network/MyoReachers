@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "myoreachers"
+version = "0.1.0"
+description = "Adds extra reaching environments to myosuite"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "myosuite>=2.12.2",
+]

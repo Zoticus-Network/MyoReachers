@@ -7,7 +7,7 @@
 	License	:: Under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 ====================================================== -->
 
-    <body childclass="myohand" name="full_body">
+    <body childclass="myowrist" name="full_body">
       <geom name="body" type="mesh" mesh="body_norighthand" euler="0 0 3.14"/>
       <body name="thorax" pos="0 0.08 1.4" euler="1.57 -1.57 0">
         <!-- <geom name="thorax" type="mesh" mesh="thorax"/> -->
@@ -252,12 +252,6 @@
                                     <geom mesh="thumbprox" name="thumbprox" type="mesh"/>
                                     <geom name="IPthumb_wrap" type="cylinder" size="0.00450000 0.005" pos="0.0121 -0.0302 -0.0096" euler="0.30473449 0.01291544 0.08796459" class="wrap"/>
                                     <inertial pos="0.0096 -0.0163 -0.0063" mass="0.0079" fullinertia="2.6e-07 7.1e-07 2.9e-07 1e-07 4e-08 -6e-08"/>
-                                    <site name="EPL-P10" pos="0.0115 -0.0036 0.0016"/>
-                                    <site name="EPL-P11" pos="0.0192 -0.0265 -0.0104"/>
-                                    <site name="EPB-P8" pos="0.0093 -0.0062 -0.0056"/>
-                                    <!-- <site name="FPL-P9" pos="-0.005 -0.006 -0.002"/> -->
-                                    <site name="FPL-P9" pos="-0.0045 -0.0184 -0.0051"></site>
-                                    <site name="FPL-P10" pos="0.0059 -0.026 -0.0111"/>
                                     <site name="IPthumb_site_EPL_side" pos="0.0167862 -0.030399 -0.0079041"/>
                                     <site name="IPthumb_site_FPL_side" pos="0.00820158 -0.028993 -0.00586527"/>
                                     <body name="distal_thumb" pos="0.014 -0.0259 -0.0101">
@@ -265,8 +259,6 @@
                                       <joint axis="-0.050102 -0.479623 0.876043" name="ip_flexion" pos="0 0 0" range="-1.309 0.436332"/>
                                       <geom mesh="thumbdist" name="thumbdist" type="mesh"/>
                                       <inertial pos="0.0056 -0.0104 -0.0044" mass="0.003" fullinertia="5e-08 3e-08 5e-08 1e-08 1e-08 -1e-08"/>
-                                      <site name="EPL-P12" pos="0.0054 -0.0071 -0.0046"/>
-                                      <site name="FPL-P11" pos="0.0024 -0.0113 -0.0041"/>
                                       <geom class="skin" type="ellipsoid" size=".007 .0055 .002" pos=".015 -.018 -.007" euler="0.2 1.57 1.5" rgba="1 1 1 .8"/>
                                       <site name="THtip" size="0.005" pos=".010 -.020 -.008" rgba=".8 0 0 1"/>
                                     </body>
@@ -283,6 +275,7 @@
                                 <site name="APL_torus_site_APL_side" pos="0.0082 0.0023 -0.0101"/>
                                 <inertial pos="0 0 0" mass="0.02" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
                               </body>
+                              <!-- INDEX FINGER -->
                               <body name="secondmc" pos="0.014685 -0.03762 0.005032">
                                 <geom name="2mcskin" class="skin" size="0.010 0.028" euler="1.42 0.15 -.1"/>
                                 <geom mesh="2mc" name="2mc" type="mesh"/>
@@ -330,32 +323,6 @@
                                   <geom mesh="2proxph" name="2proxph" type="mesh"/>
                                   <geom name="Secondpm_wrap" type="cylinder" size="0.0042 0.005" pos="0.0075 -0.0407 0.0061" euler="0.74193947 -1.47393055 0.70965087" class="wrap"/>
                                   <inertial pos="0 0 0" mass="0.01" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
-                                  <!-- <site name="FDS2-P6" pos="0.001 -0.001 -0.009"/>
-                                  <site name="FDS2-P7" pos="0.0064 -0.0368 0.0023"/>
-                                  <site name="FDP2-P6" pos="0.001 -0.0134 -0.0095"/>
-                                  <site name="FDP2-P7" pos="0.008 -0.0363 0.0026"/>
-                                  <site name="EDC2-P5" pos="-0.0003 -0.0108 0.0116"/>
-                                  <site name="EDC2-P6" pos="0.006 -0.041 0.013"/>
-                                  <site name="EIP-P6" pos="0.0017 -0.0103 0.0095"/>
-                                  <site name="EIP-P7" pos="0.0071 -0.0413 0.0141"/>
-                                  <site name="RI2-P3" pos="0.007 -0.0067 -0.0001"/>
-                                  <site name="LU_RB2-P3" pos="0.0084 -0.0083 0"/>
-                                  <site name="LU_RB2-P4" pos="0.013 -0.042 0.007"/>
-                                  <site name="UI_UB2-P3" pos="-0.005 -0.013 0.004"/>
-                                  <site name="UI_UB2-P4" pos="0.002 -0.045 0.011"/> -->
-                                  <site name="FDS2-P6" pos="0.0013 -0.0084 -0.012"></site>
-                                  <site name="FDS2-P7" pos="0.0064 -0.0368 0.0023"></site>
-                                  <site name="FDP2-P6" pos="0.0033 -0.0202 -0.005"></site>
-                                  <site name="FDP2-P7" pos="0.0063 -0.0343 -0.0006"></site>
-                                  <site name="EDC2-P5" pos="0.002 -0.01 0.007"></site>
-                                  <site name="EDC2-P6" pos="0.007 -0.038 0.012"></site>
-                                  <site name="EIP-P6" pos="0.0017 -0.0103 0.0095"></site>
-                                  <site name="EIP-P7" pos="0.0071 -0.0413 0.0141"></site>
-                                  <site name="RI2-P3" pos="0.007 -0.0067 -0.0001"></site>
-                                  <site name="LU_RB2-P3" pos="0.0084 -0.0083 -0"></site>
-                                  <site name="LU_RB2-P4" pos="0.0113 -0.0339 0.0094"></site>
-                                  <site name="UI_UB2-P3" pos="-0.0043 -0.0159 0.0024"></site>
-                                  <site name="UI_UB2-P4" pos="0.001 -0.0394 0.0111"></site>
                                   <site name="Secondpm_site_EDC2_side" pos="0.0075 -0.0407 0.0121"/>
                                   <site name="Secondpm_site_EIP_side" pos="0.00869283 -0.0401863 0.0131834"/>
                                   <site name="Secondpm_site_LU_RB2_side" pos="0.075 -0.0507 0.01"/>
@@ -366,28 +333,6 @@
                                     <geom mesh="2midph" name="2midph" type="mesh"/>
                                     <geom name="Secondmd_wrap" pos="0.0036 -0.0243 0.0003" quat="0.749819 -0.0209733 -0.656264 0.0815428" class="wrap" size="0.003 0.005" type="cylinder"/>
                                     <inertial pos="0 0 0" mass="0.003" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
-                                    <!-- <site name="FDS2-P8" pos="0.0013 -0.019 -0.0034"/>
-                                    <site name="FDP2-P8" pos="0.0007 -0.0089 -0.0077"/>
-                                    <site name="FDP2-P9" pos="0.001 -0.017 -0.005"/>
-                                    <site name="EDC2-P7" pos="-0.0009 -0.0046 0.0074"/>
-                                    <site name="EDC2-P8" pos="0.003 -0.0249 0.0048"/>-->
-                                    <site name="EIP-P8" pos="0.0012 -0.009 0.006"/>
-                                    <site name="EIP-P9" pos="0.004 -0.026 0.004"/>
-                                    <!-- <site name="LU_RB2-P5" pos="0.006 -0.008 0.001"/>
-                                    <site name="LU_RB2-P6" pos="0.006 -0.021 0.002"/>
-                                    <site name="UI_UB2-P5" pos="-0.003 -0.01 0.004"/>
-                                    <site name="UI_UB2-P6" pos="0.001 -0.023 0.003"/> -->
-                                    <site name="FDS2-P8" pos="-0.0002 -0.0088 -0.0041"></site>
-                                    <site name="FDP2-P8" pos="0.0006 -0.0088 -0.0058"></site>
-                                    <site name="FDP2-P9" pos="0.0043 -0.0196 -0.0035"></site>
-                                    <!-- <site name="EDC2-P7" pos="0.001 -0.009 0.0035"></site>
-                                    <site name="EDC2-P8" pos="0.003 -0.025 0.0035"></site> -->
-                                    <site name="EDC2-P7" pos="-0.0009 -0.0046 0.0074"/>
-                                    <site name="EDC2-P8" pos="0.003 -0.0249 0.0048"/>
-                                    <site name="LU_RB2-P5" pos="0.006 -0.008 0.001"></site>
-                                    <site name="LU_RB2-P6" pos="0.006 -0.021 0.002"></site>
-                                    <site name="UI_UB2-P5" pos="-0.0041 -0.0066 0.0038"></site>
-                                    <site name="UI_UB2-P6" pos="0.001 -0.023 0.003"></site>
                                     <site name="Secondmd_site_EDC2_side" pos="0.00435202 -0.0234011 0.00618443"/>
                                     <site name="Secondmd_site_EIP_side" pos="0.00435202 -0.0234011 0.00618443"/>
                                     <body name="distph2" pos="0.003333 -0.024888 0.00122">
@@ -395,10 +340,6 @@
                                       <geom class="skin" size="0.007 0.008" pos="0.001 -0.008 0.00" euler="1.5 0.14 -.35"/>
                                       <geom mesh="2distph" name="2distph" type="mesh"/>
                                       <inertial pos="0 0 0" mass="0.002" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
-                                      <site name="FDP2-P10" pos="0.0007 -0.0056 -0.004"/>
-                                      <site name="EDC2-P9" pos="0 -0.0056 0.0034"/>
-                                      <site name="EIP-P10" pos="0.001 -0.004 0.003"/>
-                                      <site name="EIP-P11" pos="0.0026 -0.0123 0.0027"/>
                                       <geom class="skin" type="ellipsoid" size=".005 .008 .002" pos=".003 -.018 0.0055" euler="0.2 0.1 0.15" rgba="1 1 1 .8"/>
                                       <site name="IFtip" size="0.005" pos=".002 -.018 -.00" rgba="0 0.8 0 1"/>
                                     </body>
@@ -446,28 +387,6 @@
                                   <geom mesh="3proxph" name="3proxph" type="mesh"/>
                                   <geom name="Thirdpm_wrap" pos="0.0017 -0.0439 0.005" quat="0.700673 0.00645453 -0.712452 0.0377825" class="wrap" size="0.004 0.005" type="cylinder"/>
                                   <inertial pos="0 0 0" mass="0.01" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
-                                  <!-- <site name="FDS3-P6" pos="0.0009 -0.017 -0.0128"/>
-                                  <site name="FDS3-P7" pos="0.001 -0.038 -0.002"/>
-                                  <site name="FDP3-P6" pos="0.0006 -0.0146 -0.0088"/>
-                                  <site name="FDP3-P7" pos="0.0016 -0.0389 -0.0027"/>
-                                  <site name="EDC3-P5" pos="0 -0.013 0.01"/>
-                                  <site name="EDC3-P6" pos="0.002 -0.043 0.013"/>
-                                  <site name="RI3-P3" pos="0.0076 -0.0117 0.0005"/>
-                                  <site name="LU_RB3-P3" pos="0.009 -0.004 -0.001"/>
-                                  <site name="LU_RB3-P4" pos="0.009 -0.039 0.014"/>
-                                  <site name="UI_UB3-P3" pos="-0.0074 -0.0117 -0.0018"/>
-                                  <site name="UI_UB3-P4" pos="-0.0053 -0.0352 0.0116"/> -->
-                                  <site name="FDS3-P6" pos="0.0006 -0.0146 -0.0088"></site>
-                                  <site name="FDS3-P7" pos="0.0045 -0.0376 -0.0021"></site>
-                                  <site name="FDP3-P6" pos="0.0007 -0.0158 -0.0081"></site>
-                                  <site name="FDP3-P7" pos="0.0024 -0.0364 -0.0005"></site>
-                                  <site name="EDC3-P5" pos="-0.0012 -0.0122 0.0107"></site>
-                                  <site name="EDC3-P6" pos="0.0017 -0.0414 0.0113"></site>
-                                  <site name="RI3-P3" pos="0.0076 -0.0117 0.0005"></site>
-                                  <site name="LU_RB3-P3" pos="0.0068 -0.022 0.0073"></site>
-                                  <site name="LU_RB3-P4" pos="0.0058 -0.0447 0.0076"></site>
-                                  <site name="UI_UB3-P3" pos="-0.0012 -0.0183 -0.0093"></site>
-                                  <site name="UI_UB3-P4" pos="-0.0043 -0.0428 0.0069"></site>                                <site name="Thirdpm_site_EDC3_side" pos="0.00155575 -0.04355 0.012991"/>
                                   <site name="Thirdpm_site_LU_RB3_side" pos="0.00155575 -0.04355 0.012991"/>
                                   <site name="Thirdpm_site_UI_UB3_side" pos="0.00155575 -0.04355 0.012991"/>
                                   <body name="midph3" pos="0.00165 -0.044211 0.00623">
@@ -476,28 +395,12 @@
                                     <geom mesh="3midph" name="3midph" type="mesh"/>
                                     <inertial pos="0 0 0" mass="0.002" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
                                     <geom name="Thirdmd_wrap" pos="0.0014 -0.0289 0.0012" quat="0.708186 -0.0221627 -0.701515 0.0765368" class="wrap" size="0.003 0.005" type="cylinder"/>
-                                    <!-- <site name="FDS3-P8" pos="-0.001 -0.013 -0.006"/>
-                                    <site name="FDP3-P8" pos="-0.0001 -0.0103 -0.0072"/>
-                                    <site name="FDP3-P9" pos="0.0021 -0.0227 -0.0034"/>
-                                    <site name="EDC3-P7" pos="0.0006 -0.0037 0.0065"/>
-                                    <site name="EDC3-P8" pos="0.0011 -0.029 0.0051"/>
-                                    <site name="LU_RB3-P5" pos="0.006 -0.007 0.006"/>
-                                    <site name="UI_UB3-P5" pos="-0.0055 -0.0088 0.0058"/> -->
-                                    <site name="FDS3-P8" pos="0.0002 -0.0107 -0.0054"></site>
-                                    <site name="FDP3-P8" pos="0.0016 -0.0115 -0.0051"></site>
-                                    <site name="FDP3-P9" pos="0.0021 -0.0214 -0.0021"></site>
-                                    <site name="EDC3-P7" pos="0.0004 -0.0042 0.0062"></site>
-                                    <site name="EDC3-P8" pos="0.0011 -0.029 0.0051"></site>
-                                    <site name="LU_RB3-P5" pos="0.0049 -0.0116 0.0035"></site>
-                                    <site name="UI_UB3-P5" pos="-0.0054 -0.0077 0.006"></site>
                                     <site name="Thirdmd_site_EDC3_side" pos="0.00142423 -0.028063 0.00714128"/>
                                     <body name="distph3" pos="0.001365 -0.029047 0.001954">
                                       <joint axis="1 0 0" name="md3_flexion" pos="0 0 0" range="0 1.5708"/>
                                       <geom class="skin" size="0.007 0.008" pos="0.0013 -0.009 -.002" euler="1.6 .05 0"/>
                                       <geom mesh="3distph" name="3distph" type="mesh"/>
                                     <inertial pos="0 0 0" mass="0.002" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
-                                      <site name="FDP3-P10" pos="0.0008 -0.004 -0.002"/>
-                                      <site name="EDC3-P9" pos="0.0008 -0.0058 0.0041"/>
                                       <geom class="skin" type="ellipsoid" size=".0055 .008 .002" pos="0.002 -.019 0.003" euler="0.2 0 0.0" rgba="1 1 1 .8"/>
                                       <site name="MFtip" size="0.005" pos=".002 -.019 -.001" rgba="0 0 0.8 1"/>
                                     </body>
@@ -542,28 +445,6 @@
                                   <inertial pos="0 0 0" mass="0.01" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
                                   <!-- <geom name="Fourthpm_wrap" pos="-0.0033 -0.0401 -0.0001" quat="0.35623 -0.660837 -0.527455 0.397727" class="wrap" size="0.004 0.005" type="cylinder"/> -->
                                   <geom name="Fourthpm_wrap" type="cylinder" size="0.00400000 0.005" pos="-0.0033 -0.0401 -0.0001" euler="-3.02291026 -1.12311937 -1.27251956" class="wrap"/>
-                                  <!-- <site name="FDS4-P6" pos="0.0019 -0.02 -0.0049"/>
-                                  <site name="FDS4-P7" pos="0.0011 -0.0331 -0.0063"/>
-                                  <site name="FDP4-P6" pos="0.0018 -0.0199 -0.004"/>
-                                  <site name="FDP4-P7" pos="-0.001 -0.034 -0.006"/>
-                                  <site name="EDC4-P5" pos="-0.002 -0.013 0.01"/>
-                                  <site name="EDC4-P6" pos="-0.005 -0.042 0.009"/>
-                                  <site name="RI4-P3" pos="0.0031 -0.0243 0.0001"/>
-                                  <site name="LU_RB4-P3" pos="0.0049 -0.0105 0.0053"/>
-                                  <site name="LU_RB4-P4" pos="0.0017 -0.0304 0.0059"/>
-                                  <site name="UI_UB4-P3" pos="-0.009 -0.017 0.005"/>
-                                  <site name="UI_UB4-P4" pos="-0.0086 -0.0401 0.0045"/> -->
-                                  <site name="FDS4-P6" pos="0.0001 -0.0127 -0.0075"></site>
-                                  <site name="FDS4-P7" pos="0.0006 -0.0361 -0.001"></site>
-                                  <site name="FDP4-P6" pos="-0.0012 -0.012 -0.0088"></site>
-                                  <site name="FDP4-P7" pos="-0.0034 -0.0332 -0.0019"></site>
-                                  <site name="EDC4-P5" pos="-0.002 -0.0084 0.0088"></site>
-                                  <site name="EDC4-P6" pos="-0.0038 -0.038 0.0048"></site>
-                                  <site name="RI4-P3" pos="0.0031 -0.0243 0.0001"></site>
-                                  <site name="LU_RB4-P3" pos="0.0002 -0.0146 0.0006"></site>
-                                  <site name="LU_RB4-P4" pos="0.0013 -0.0403 0.0041"></site>
-                                  <site name="UI_UB4-P3" pos="-0.0042 -0.0212 -0.0055"></site>
-                                  <site name="UI_UB4-P4" pos="-0.0089 -0.0388 0.0018"></site>
                                   <site name="Fourthpm_site_EDC4_side" pos="0.00028232 -0.0402561 0.008299"/>
                                   <!-- <site name="Fourthpm_site_LU_RB4_side" pos="-0.00228232 -0.0322561 -0.001299"/> -->
                                   <site name="Fourthpm_site_UI_UB4_side" pos="-0.0089 -0.0388 0.0018"/>
@@ -573,20 +454,6 @@
                                     <geom mesh="4midph" name="4midph" type="mesh"/>
                                     <geom name="Fourthmd_wrap" type="cylinder" size="0.00300000 0.005" pos="-0.0021 -0.0247 -0.0001" euler="-3.02971705 -1.10287355 -2.87211382" class="wrap"/>
                                     <inertial pos="0 0 0" mass="0.003" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
-                                    <!-- <site name="FDS4-P8" pos="-0.0009 -0.0147 -0.0021"/>
-                                    <site name="FDP4-P8" pos="0.001 -0.009 -0.007"/>
-                                    <site name="FDP4-P9" pos="-0.001 -0.018 -0.003"/>
-                                    <site name="EDC4-P7" pos="-0.003 -0.015 0.006"/>
-                                    <site name="EDC4-P8" pos="-0.004 -0.026 0.006"/>
-                                    <site name="LU_RB4-P5" pos="0.0005 -0.0149 0.0048"/>
-                                    <site name="UI_UB4-P5" pos="-0.005 -0.014 0.004"/> -->
-                                    <site name="FDS4-P8" pos="0 -0.0119 -0.0018"></site>
-                                    <site name="FDP4-P8" pos="0.0023 -0.0071 -0.006"></site>
-                                    <site name="FDP4-P9" pos="-0.0007 -0.0197 -0.0013"></site>
-                                    <site name="EDC4-P7" pos="-0.0019 -0.0058 0.0088"></site>
-                                    <site name="EDC4-P8" pos="-0.004 -0.026 0.006"></site>
-                                    <site name="LU_RB4-P5" pos="0.0043 -0.0045 0.0043"></site>
-                                    <site name="UI_UB4-P5" pos="-0.0058 -0.004 0.0034"></site>
                                     <site name="Fourthmd_site_EDC4_side" pos="-0.0021 -0.0247 0.0061" rgba="1 0 0 1"/>
 
                                     <body name="distph4" pos="-0.002317 -0.024789 0.000563">
@@ -594,8 +461,6 @@
                                       <geom class="skin" size="0.0068 0.008" pos="0.00 -0.01 -.002" euler="1.6 -.1 0"/>
                                       <geom mesh="4distph" name="4distph" type="mesh"/>
                                       <inertial pos="0 0 0" mass="0.002" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
-                                      <site name="FDP4-P10" pos="0.0002 -0.014 -0.0022"/>
-                                      <site name="EDC4-P9" pos="-0.001 -0.008 0.003"/>
                                       <geom class="skin" type="ellipsoid" size=".005 .008 .002" pos="-.004 -.019 0.003" euler="0.2 -.5 0.0" rgba="1 1 1 .8"/>
                                       <site name="RFtip" size="0.005" pos="-.001 -.018 .001" rgba="0.8 0.8 0 1"/>
                                     </body>
@@ -637,29 +502,6 @@
                                   <geom mesh="5proxph" name="5proxph" type="mesh"/>
                                   <geom name="Fifthpm_wrap" pos="-0.0046 -0.0349 -0.0042" quat="0.4295 -0.0398509 -0.90052 -0.0548241" class="wrap" size="0.004 0.005" type="cylinder"/>
                                   <inertial pos="0 0 0" mass="0.005" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
-                                  <!-- <site name="FDS5-P6" pos="0.0018 -0.0143 -0.0055"/>
-                                  <site name="FDS5-P7" pos="0.001 -0.021 -0.007"/>
-                                  <site name="FDP5-P6" pos="-0.001 -0.018 -0.008"/>
-                                  <site name="FDP5-P7" pos="-0.001 -0.026 -0.007"/>
-                                  <site name="EDC5-P5" pos="-0.006 -0.018 0.004"/>
-                                  <site name="EDC5-P6" pos="-0.008 -0.034 0.001"/> -->
-                                  <site name="EDM-P7" pos="-0.0054 -0.0324 0.0001"/>
-                                  <!-- <site name="RI5-P3" pos="0.003 -0.018 0.001"/>
-                                  <site name="LU_RB5-P3" pos="0.0047 -0.01 0.0042"/>
-                                  <site name="LU_RB5-P4" pos="-0.002 -0.034 0.002"/>
-                                  <site name="UI_UB5-P3" pos="-0.0073 -0.0152 -0.0032"/>
-                                  <site name="UI_UB5-P4" pos="-0.009 -0.034 -0.006"/> -->
-                                  <site name="FDS5-P6" pos="-0.0017 -0.0149 -0.0071"></site>
-                                  <site name="FDS5-P7" pos="-0.0025 -0.0259 -0.0054"></site>
-                                  <site name="FDP5-P6" pos="-0.001 -0.0137 -0.0051"></site>
-                                  <site name="FDP5-P7" pos="-0.0005 -0.0291 -0.008"></site>
-                                  <site name="EDC5-P5" pos="-0.0045 -0.0123 0.0063"></site>
-                                  <site name="EDC5-P6" pos="-0.0079 -0.0322 0.0025"></site>
-                                  <site name="RI5-P3" pos="0.0047 -0.0143 0.0023"></site>
-                                  <site name="LU_RB5-P3" pos="0.0035 -0.0131 0.002"></site>
-                                  <site name="LU_RB5-P4" pos="-0.0032 -0.0372 0.0031"></site>
-                                  <site name="UI_UB5-P3" pos="-0.0031 -0.0177 -0.0079"></site>
-                                  <site name="UI_UB5-P4" pos="-0.0107 -0.0359 -0.0032"></site>
 
                                   <site name="Fifthpm_site_EDC5_side" pos="-0.0026 -0.0399 -0.0022"/>
                                   <site name="Fifthpm_site_LU_RB5_side" pos="-0.0032 -0.0372 0.0031"/>
@@ -671,24 +513,13 @@
                                     <geom mesh="5midph" name="5midph" type="mesh"/>
                                     <geom name="Fifthmd_wrap" pos="-0.0025 -0.0205 -0.0025" quat="0.35929 -0.0253303 -0.929016 -0.0848458" class="wrap" size="0.003 0.005" type="cylinder"/>
                                     <inertial pos="0 0 0" mass="0.002" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
-                                    <site name="FDS5-P8" pos="0.0011 -0.0182 -0.0046"/>
-                                    <site name="FDP5-P8" pos="-0.001 -0.009 -0.004"/>
-                                    <site name="FDP5-P9" pos="-0.001 -0.016 -0.004"/>
-                                    <site name="EDC5-P7" pos="-0.005 -0.01 0.002"/>
-                                    <site name="EDC5-P8" pos="-0.005 -0.021 0"/>
-                                    <site name="LU_RB5-P5" pos="-0.0007 -0.0167 0.0017"/>
-                                    <site name="UI_UB5-P5" pos="-0.005 -0.016 -0.002"/>
                                     <site name="Fifthmd_site_EDC5_side" pos="-0.00694323 -0.0205834 0.00153122"/>
-                                    <site name="EDM-P8" pos="-0.002 -0.003 0.003"/>
 
                                     <body name="distph5" pos="-0.002871 -0.020677 -0.002243">
                                     <joint axis="0.643112 -0.226804 0.731414" name="md5_flexion" pos="0 0 0" range="0 1.5708"/>
                                       <geom class="skin" size="0.006 0.007" pos="-.0002 -0.009 -.002" euler="1.65 -.1 0"/>
                                       <geom mesh="5distph" name="5distph" type="mesh"/>
                                       <inertial pos="0 0 0" mass="0.001" fullinertia="0.0001 0.0001 0.0001 0 0 0"></inertial>
-                                      <site name="FDP5-P10" pos="-0.0003 -0.0139 -0.0048"/>
-                                      <site name="EDC5-P9" pos="-0.002 -0.007 0"/>
-                                      <site name="EDM-P9" pos="-0.0023 -0.0033 0.0006"/>
                                       <geom class="skin" type="ellipsoid" size=".0045 .006 .002" pos="-.005 -.018 0.000" euler="0.2 -.8 0.0" rgba="1 1 1 .8"/>
                                       <site name="LFtip" size="0.005" pos="-.001 -.017 -.003" rgba="0.8 0 0.8 1"/>
                                     </body>
