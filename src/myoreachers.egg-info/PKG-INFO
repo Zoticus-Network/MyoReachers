@@ -1,7 +1,0 @@
-Metadata-Version: 2.4
-Name: myoreachers
-Version: 0.1.0
-Summary: Adds extra reaching environments to myosuite
-Requires-Python: >=3.8
-Description-Content-Type: text/markdown
-Requires-Dist: myosuite>=2.12.2
