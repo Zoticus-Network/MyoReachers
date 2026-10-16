@@ -13,9 +13,6 @@ model_paths = [
             "elbow/myoelbow_1dof6muscles_1dofSoftexo_Ideal.xml",
             "elbow/myoelbow_1dof6muscles_1dofSoftexo_sim2.xml",
 
-            # arms
-            "arm/myoarm.xml",
-
             # wrist models
             "wrist/myowrist.xml",
 
