@@ -55,6 +55,12 @@ environment.close()
 
 The package includes the MuJoCo XML models and supporting meshes, textures, and materials required by the registered environments. These resources are installed alongside the Python package and resolved internally from the package directory.
 
+## Future work
+
+- Add a full-arm environment with a standard reaching task.
+- Add a full-arm task mimicking the Unified Parkinson's Disease Rating Scale (UPDRS) reaching task.
+- Upgrade the project to MyoSuite 3.0.0.
+
 ## License
 
 MyoReachers is distributed under the Apache License 2.0. Some included models retain their original MyoSuite attribution and license notices; see the files under `src/myoreachers/simhive/myo_sim` for those notices.
