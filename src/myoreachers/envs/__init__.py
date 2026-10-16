@@ -37,7 +37,7 @@ def register_env_with_variants(id, entry_point, max_episode_steps, kwargs):
 
 # Arm posing ================================
 register_env_with_variants(
-    id='myoreacherArm-v0',
+    id='myoreachersArm-v0',
     entry_point="myoreachers.envs.reacher_v0:ReacherEnvV0",
     max_episode_steps=200,
     kwargs={
@@ -53,7 +53,7 @@ register_env_with_variants(
 
 # Elbow posing ==============================
 register_env_with_variants(
-    id="myoreacherElbow1D6MFixed-v0",
+    id="myoreachersElbow1D6MFixed-v0",
     entry_point="myoreachers.envs.pose_v0:PoseEnvV0",
     max_episode_steps=100,
     kwargs={
@@ -68,7 +68,7 @@ register_env_with_variants(
     },
 )
 register_env_with_variants(
-    id="myoreacherElbow1D6MRandom-v0",
+    id="myoreachersElbow1D6MRandom-v0",
     entry_point="myoreachers.envs.pose_v0:PoseEnvV0",
     max_episode_steps=100,
     kwargs={
@@ -86,29 +86,29 @@ register_env_with_variants(
 
 # Wrist Reaching ============================
 register_env_with_variants(
-    id="myoreacherWristFixed-v0",
+    id="myoreachersWristFixed-v0",
     entry_point="myoreachers.envs.radreach_v0:ReachEnvV0",
     max_episode_steps=100,
     kwargs={
         "model_path": curr_dir + "/assets/wrist/myowrist_pose.xml",
         "target_reach_range": {
-            "MFtip": ((-0.146, -0.547, 1.447), (-0.146, -0.547, 1.447)),
+            "MFtip": ((0.1739132007385475, 1, 0), (0.1739132007385475, 1, 0)),
         },
         "normalize_act": True,
         "far_th": 0.044,
     },
 )
 register_env_with_variants(
-    id="myoreacherWristRandom-v0",
+    id="myoreachersWristRandom-v0",
     entry_point="myoreachers.envs.radreach_v0:ReachEnvV0",
     max_episode_steps=100,
     kwargs={
         "model_path": curr_dir + "/assets/wrist/myowrist_pose.xml",
         "target_reach_range": {
             "MFtip": (
-                
-                (-0.146 - 0.040, -0.547 - 0.020, 1.447 - 0.010),
-                (-0.146 + 0.040, -0.547 + 0.020, 1.447 + 0.010),
+                #radius, theta, phi
+                (0.1739, 1.35, 0),
+                (0.1739, 1.75, 0),
             ),
         },
         "normalize_act": True,

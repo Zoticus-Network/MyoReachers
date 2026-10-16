@@ -1,6 +1,9 @@
 """=================================================
 # Copyright (c) MyoSuite Authors
 Authors  :: Vikash Kumar (vikashplus@gmail.com), Vittorio Caggiano (caggiano@gmail.com)
+
+# Modifications Copyright (c) 2026 Nathaniel Ward
+Authors  :: Nathaniel Ward (nathaniel@zoticus.network)
 ================================================="""
 
 import collections
@@ -42,6 +45,10 @@ class PoseEnvV0(BaseV0):
             seed=seed,
             env_credits=self.MYO_CREDIT,
         )
+
+        self.act_change = 0
+        self.act_time   = 0
+        self.prev_act   = np.zeros(6)
 
         self._setup(**kwargs)
 
@@ -108,10 +115,29 @@ class PoseEnvV0(BaseV0):
             else np.zeros_like(obs_dict["qpos"])
         )
         obs_dict["pose_err"] = self.target_jnt_value - obs_dict["qpos"]
+
+        # action change
+        if mj_data.time != self.act_time:
+            self.act_change = self.prev_act - obs_dict["act"]
+            self.act_time   = mj_data.time
+            self.prev_act   = obs_dict["act"]
+
+        obs_dict["act_change"] = self.act_change
+
         return obs_dict
 
     def get_reward_dict(self, obs_dict):
-        pose_dist = np.linalg.norm(obs_dict["pose_err"], axis=-1)
+        err = obs_dict["pose_err"]
+        pose_dist = np.linalg.norm(err, axis=-1)
+        vel = obs_dict["qvel"]
+        speed = np.linalg.norm(vel, axis=-1)
+        current_time = float(np.asarray(obs_dict["time"]).squeeze())
+        motion_similarity = (vel*err <= 0) * speed 
+        act_change = (
+            np.sum(self.act_change)
+            if (self.spec != None and current_time > (self.horizon // 4) * self.dt) else
+            0
+        )
         act_mag = np.linalg.norm(self.obs_dict["act"], axis=-1)
         if self.mj_model.na != 0:
             act_mag = act_mag / self.mj_model.na
@@ -128,8 +154,11 @@ class PoseEnvV0(BaseV0):
                 ),
                 ("penalty", -1.0 * (pose_dist > far_th)),
                 ("act_reg", -1.0 * act_mag),
+                ("motion", -1.0 * speed),
+                ("moving_away", -1.0 * np.mean(motion_similarity)), # cos_sim(err,velocity) - 0.75
+                ("act_change", act_change), 
                 # Must keys
-                ("sparse", -1.0 * pose_dist),
+                ("sparse", -1.0*np.log( np.abs( 75*pose_dist )+.1 ) - np.abs(pose_dist/2)),
                 ("solved", pose_dist < self.pose_thd),
                 ("done", pose_dist > far_th),
             )
@@ -253,5 +282,9 @@ class PoseEnvV0(BaseV0):
             obs = super().reset(reset_qpos=jnt_init, **kwargs)
         else:
             print("Reset Type not found")
+
+        self.act_change = 0
+        self.act_time   = 0
+        self.prev_act   = np.zeros(6)
 
         return obs

@@ -6,11 +6,6 @@ model_paths = [
             # Basic models
             "basic/myomuscle.xml",
 
-            # finger models
-            "finger/finger_v0.xml",
-            "finger/myofinger_v0.xml",
-            "finger/motorfinger_v0.xml",
-
             # elbow models
             "elbow/myoelbow_1dof6muscles_1dofexo.xml",
             "elbow/myoelbow_1dof6muscles.xml",
@@ -21,11 +16,8 @@ model_paths = [
             # arms
             "arm/myoarm.xml",
 
-            # hand models
-            "hand/myohand.xml",
-
-            # leg models
-            "leg/myolegs.xml",
+            # wrist models
+            "wrist/myowrist.xml",
 
             # torso
             "torso/myotorsorigid.xml",
