@@ -4,7 +4,7 @@ MyoReachers adds reaching environments to [MyoSuite](https://github.com/MyoHub/m
 
 ## Installation
 
-MyoReachers supports Python 3.8 and newer. Install it from a checkout with:
+MyoReachers supports Python 3.10 and newer. Install it from a checkout with:
 
 ```bash
 python -m pip install .
