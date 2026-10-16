@@ -1,6 +1,6 @@
 # MyoReachers
 
-MyoReachers adds reaching and pose-control environments to [MyoSuite](https://github.com/MyoHub/myosuite). The environments use MuJoCo musculoskeletal models and are intended for reinforcement-learning experiments involving the arm, elbow, and wrist.
+MyoReachers adds reaching environments to [MyoSuite](https://github.com/MyoHub/myosuite). The environments use MuJoCo musculoskeletal models and are intended for reinforcement-learning experiments involving the elbow, and wrist.
 
 ## Installation
 
@@ -24,7 +24,6 @@ Importing `myoreachers` registers these environments with the MyoSuite Gym-compa
 
 | Environment | Description |
 | --- | --- |
-| `myoreachersArm-v0` | Arm reaching toward a randomized target |
 | `myoreachersElbow1D6MFixed-v0` | One-degree-of-freedom, six-muscle elbow pose control with a fixed target |
 | `myoreachersElbow1D6MRandom-v0` | One-degree-of-freedom, six-muscle elbow pose control with randomized targets |
 | `myoreachersWristFixed-v0` | Wrist reaching with a fixed target |
@@ -45,28 +44,16 @@ observation = environment.reset()
 
 for _ in range(100):
 	action = environment.action_space.sample()
-	observation, reward, done, info = environment.step(action)
-	if done:
+	observation, reward, terminated, truncated, info = environment.step(action)
+	if terminated or truncated:
 		break
 
 environment.close()
 ```
 
-Depending on the installed MyoSuite/Gym compatibility layer, `reset` and `step` may return the newer Gymnasium-style values. Use the return-value convention provided by your installed MyoSuite version.
-
 ## Included models
 
 The package includes the MuJoCo XML models and supporting meshes, textures, and materials required by the registered environments. These resources are installed alongside the Python package and resolved internally from the package directory.
-
-## Development
-
-Compile the Python sources before opening a pull request:
-
-```bash
-python -m compileall -q src
-```
-
-The repository also contains MuJoCo model-loading checks under `src/myoreachers/simhive/myo_sim/test_sims.py`. They require the MyoSuite/MuJoCo dependencies and a complete model asset checkout.
 
 ## License
 

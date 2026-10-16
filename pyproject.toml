@@ -13,7 +13,7 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
-    "myosuite>=2.12.2",
+    "myosuite==2.12.2",
 ]
 
 classifiers = [
