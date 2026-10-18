@@ -1,6 +1,10 @@
 __pycache__
 **.pyc
+
 **.egg-info
+
+build/
+dist/
+
 reacher_v0.py
 arm/
-build
