@@ -11,12 +11,12 @@
 	Author	:: Nathaniel Ward (nathaniel@zoticus.network)
 ====================================================== -->
 
-    <include file="assets/myohand_assets.xml"/>
+    <include file="assets/myowrist_assets.xml"/>
     <include file="../scene/myosuite_scene.xml"/>
     <compiler meshdir=".." texturedir=".."/>
 
     <worldbody>
-        <include file="assets/myohand_body.xml"/>
+        <include file="assets/myowrist_body.xml"/>
     </worldbody>
 
 </mujoco>

@@ -7,11 +7,8 @@ model_paths = [
             "basic/myomuscle.xml",
 
             # elbow models
-            "elbow/myoelbow_1dof6muscles_1dofexo.xml",
             "elbow/myoelbow_1dof6muscles.xml",
             "elbow/myoelbow_2dof6muscles.xml",
-            "elbow/myoelbow_1dof6muscles_1dofSoftexo_Ideal.xml",
-            "elbow/myoelbow_1dof6muscles_1dofSoftexo_sim2.xml",
 
             # wrist models
             "wrist/myowrist.xml",
